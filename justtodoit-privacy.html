@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Just Todo It</title>
+    <meta
+      name="description"
+      content="Privacy policy for the Just Todo It Android app (Google Tasks companion)."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #1a1a1a;
+        --muted: #555;
+        --bg: #fafafa;
+        --border: #e0e0e0;
+        --link: #0b57d0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #e8e8e8;
+          --muted: #a8a8a8;
+          --bg: #121212;
+          --border: #333;
+          --link: #8ab4f8;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 3rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu,
+          "Helvetica Neue", sans-serif;
+        line-height: 1.55;
+        color: var(--fg);
+        background: var(--bg);
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+      h1 {
+        font-size: clamp(1.35rem, 4vw, 1.75rem);
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        line-height: 1.2;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin: 1.75rem 0 0.65rem;
+        font-weight: 650;
+      }
+      p,
+      ul {
+        margin: 0 0 0.85rem;
+      }
+      ul {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin-bottom: 0.35rem;
+      }
+      a {
+        color: var(--link);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        <strong>Just Todo It</strong> · Android app
+        <code>com.justtodoit.app</code><br />
+        <time datetime="2026-05-03">Last updated: May 3, 2026</time>
+      </p>
+    </header>
+
+    <main>
+      <p>
+        This policy describes how the <strong>Just Todo It</strong> mobile
+        application (“the App”) handles information when you use it. The App
+        is a client for <strong>Google Tasks</strong>: your task lists and
+        tasks remain stored and controlled by Google unless described below.
+      </p>
+
+      <h2>Who is responsible</h2>
+      <p>
+        The developer of the App (as shown on the
+        <a
+          href="https://play.google.com/store/apps/details?id=com.justtodoit.app"
+          >Google Play</a
+        >
+        listing) is responsible for the App’s behavior on your device.
+        Google processes account and Tasks data under
+        <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.
+        If the App is configured to use Supabase, Supabase processes
+        authentication data under
+        <a href="https://supabase.com/privacy">Supabase’s Privacy Policy</a>
+        (see also the Supabase section below).
+      </p>
+
+      <h2>Information the App accesses</h2>
+      <ul>
+        <li>
+          <strong>Google account sign-in.</strong> The App uses Google’s
+          sign-in on your device. Google may receive technical data related to
+          authentication as described in
+          <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>Google Tasks.</strong> With your permission, the App requests
+          OAuth access to the Google Tasks API
+          (<code>https://www.googleapis.com/auth/tasks</code>) so it can read,
+          create, update, and delete tasks and lists in your Google account. That
+          data is processed by Google’s servers; the App does not replace Google
+          as the primary store for your tasks.
+        </li>
+        <li>
+          <strong>Profile basics from Google.</strong> The App may display your
+          name and email (or equivalent account label) returned by Google Sign-In
+          so you can see which account is active.
+        </li>
+      </ul>
+
+      <h2>Optional Supabase authentication</h2>
+      <p>
+        Depending on app configuration, after you sign in
+        with Google the App may exchange your Google <strong>ID token</strong>
+        with <a href="https://supabase.com/">Supabase</a> Auth
+        (<code>signInWithIdToken</code>) to create a session. If Supabase is not
+        configured or the exchange fails, the App can still operate in a
+        “direct” mode using only the Google account session on the device.
+      </p>
+      <p>
+        When Supabase is used, Supabase processes authentication data under
+        <a href="https://supabase.com/privacy">Supabase’s Privacy Policy</a>.
+        The App uses Supabase’s public (anon) project key in the client; it does
+        not embed a secret database password in the distributed app.
+      </p>
+
+      <h2>Data stored on your device</h2>
+      <p>
+        To work quickly and support offline-style use, the App may cache task
+        data and pending changes on your device (for example using local storage
+        and/or a local database). That data is tied to your device and the
+        accounts you use; uninstalling the App or clearing app data removes that
+        local copy (it does not delete your tasks in Google Tasks).
+      </p>
+
+      <h2>Background activity</h2>
+      <p>
+        The App may register background work (for example periodic sync) so
+        tasks can stay up to date. Background runs use the same Google account
+        and permissions you already granted; they do not introduce a separate
+        account system beyond what is described above.
+      </p>
+
+      <h2>What we do not do</h2>
+      <ul>
+        <li>
+          The App is not designed to sell your personal information or to show
+          third-party advertising based on a separate ad profile operated by the
+          developer.
+        </li>
+        <li>
+          The App does not require you to create a custom “Just Todo It” server
+          account; sign-in is through Google (and optionally Supabase Auth as a
+          session layer).
+        </li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>
+        The App is not directed at children under 13 (or the minimum age required
+        in your region). Do not use the App for child-directed accounts if that
+        would violate Google’s or your local rules.
+      </p>
+
+      <h2>International users</h2>
+      <p>
+        Google and Supabase (if used) may process data in countries where they
+        operate. See their policies for details on transfers and legal bases.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        The developer may update this page when the App or practices change. The
+        “Last updated” date at the top will be revised when material changes are
+        made.
+      </p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>
+          Revoke the App’s access in your
+          <a href="https://myaccount.google.com/permissions">Google Account</a>
+          settings.
+        </li>
+        <li>
+          Sign out inside the App where offered; clear app data or uninstall to
+          remove local caches.
+        </li>
+      </ul>
+
+      <h2 id="data-deletion">Deleting your data (Just Todo It)</h2>
+      <p>
+        <strong>Just Todo It</strong> does not create a separate “Just Todo It”
+        login. You sign in with <strong>Google</strong>; your tasks live in
+        <strong>Google Tasks</strong> under your Google account.
+      </p>
+      <p><strong>To stop this app from accessing your Google account</strong></p>
+      <ol>
+        <li>
+          Open
+          <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>
+          and remove <strong>Just Todo It</strong> (or the app name shown for this OAuth client).
+        </li>
+        <li>
+          In the App, use <strong>Sign out</strong> if available, then
+          <strong>Clear storage</strong> / <strong>Clear data</strong> for the
+          app in Android settings, or <strong>uninstall</strong> the App. That
+          removes local caches and queued changes on the device.
+        </li>
+      </ol>
+      <p><strong>What is deleted vs kept</strong></p>
+      <ul>
+        <li>
+          <strong>Removed from the device</strong> when you clear app data or
+          uninstall: locally cached tasks, settings, and pending sync queues
+          stored only on the device.
+        </li>
+        <li>
+          <strong>Not deleted by this App</strong>: your task lists and tasks in
+          <strong>Google Tasks</strong>. Delete or edit those in Google Tasks
+          (e.g. tasks.google.com or another Google Tasks client) if you want
+          them gone from Google.
+        </li>
+        <li>
+          If your build uses <strong>Supabase</strong> Auth, authentication
+          metadata is processed by Supabase per their policies; sign out and
+          revoke Google access as above, and contact the developer via Play if
+          you need help with Supabase-side deletion.
+        </li>
+      </ul>
+      <p>
+        There is no extra retention period for local device data beyond what
+        Android keeps after uninstall (if any). Google and Supabase retention
+        follow their own policies.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For privacy questions about <strong>Just Todo It</strong>, use the
+        contact details on the
+        <a
+          href="https://play.google.com/store/apps/details?id=com.justtodoit.app"
+          >Google Play</a
+        >
+        listing.
+      </p>
+    </main>
+  </body>
+</html>
