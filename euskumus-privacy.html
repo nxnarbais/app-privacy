@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — EskuMus</title>
+    <meta
+      name="description"
+      content="Privacy policy for EskuMus, the professional Basque Mus score counter app."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #1a1a1a;
+        --muted: #555;
+        --bg: #fafafa;
+        --border: #e0e0e0;
+        --link: #009639; /* Basque Green */
+        --accent: #C60B1E; /* Basque Red */
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #e8e8e8;
+          --muted: #a8a8a8;
+          --bg: #121212;
+          --border: #333;
+          --link: #8ae4a9;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 1.5rem clamp(1rem, 4vw, 2.5rem) 3rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu,
+          "Helvetica Neue", sans-serif;
+        line-height: 1.55;
+        color: var(--fg);
+        background: var(--bg);
+        max-width: 42rem;
+        margin-inline: auto;
+      }
+      header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+      h1 {
+        font-size: clamp(1.35rem, 4vw, 1.75rem);
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        line-height: 1.2;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        margin: 1.75rem 0 0.65rem;
+        font-weight: 650;
+        border-left: 3px solid var(--accent);
+        padding-left: 0.5rem;
+      }
+      p,
+      ul,
+      ol {
+        margin: 0 0 0.85rem;
+      }
+      ul,
+      ol {
+        padding-left: 1.25rem;
+      }
+      li {
+        margin-bottom: 0.35rem;
+      }
+      a {
+        color: var(--link);
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        font-family: monospace;
+        background: rgba(0, 0, 0, 0.05);
+        padding: 0.1rem 0.3rem;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+      @media (prefers-color-scheme: dark) {
+        code {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="meta">
+        <strong>EskuMus</strong> · Mobile & Web Application<br />
+        <time datetime="2026-06-15">Last updated: June 15, 2026</time>
+      </p>
+    </header>
+
+    <main>
+      <p>
+        This privacy policy describes how <strong>EskuMus</strong> (“the App”) handles information when you use it. The App is designed as a digital score counter alternative to the physical stones traditionally used in the game of Basque Mus. 
+      </p>
+      <p>
+        We believe in complete data privacy: **EskuMus operates entirely offline and locally on your device.** There are no remote tracking servers, advertising profiles, or cloud databases logging your game data.
+      </p>
+
+      <h2>Who is responsible</h2>
+      <p>
+        The developer of the App (as listed on the application's source repository or digital store listings) is responsible for the App's behavior on your device. 
+      </p>
+
+      <h2>Information the App Processes</h2>
+      <p>
+        Because EskuMus handles data locally, your data is never broadcast to third parties. The App locally processes:
+      </p>
+      <ul>
+        <li>
+          <strong>Match Configuration Data:</strong> Custom team names, match language configurations, and target scoring rules (30 vs 40 Tantos) selected during setup.
+        </li>
+        <li>
+          <strong>Match Timeline & Scores:</strong> Score mutations, timestamps, delta point additions, and match progression tracking data (<code>TimelineEntry</code> and <code>SavedMatch</code> sets) to power the local undo system and display the SVG match match progression graph.
+        </li>
+      </ul>
+
+      <h2>Data Storage & Off-line Nature</h2>
+      <p>
+        To ensure stability when placed flat on a table during match play, all data remains trapped strictly inside your device sandbox:
+      </p>
+      <ul>
+        <li>
+          <strong>Mobile Platform (React Native / Expo):</strong> Match history and local timeline logs are saved securely using your mobile device’s native isolated storage via <code>@react-native-async-storage/async-storage</code>.
+        </li>
+        <li>
+          <strong>Web Platform (React / Vite Simulator):</strong> When utilizing the interactive browser-based demonstration, data persists using standard, isolated browser <code>window.localStorage</code>.
+        </li>
+      </ul>
+
+      <h2>What We Do Not Do</h2>
+      <ul>
+        <li>
+          <strong>No Server Sign-ins:</strong> The App requires no registration or creation of user profiles. 
+        </li>
+        <li>
+          <strong>No Third-Party Analytics or Ads:</strong> We do not deploy advertising SDKs, session-replay utilities, or demographic monitoring cookies.
+        </li>
+        <li>
+          <strong>No Cloud Transmissions:</strong> Match logs remain exclusively on your phone or web storage engine; your final scorelines or local win ratios are never harvested or uploaded.
+        </li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>
+        The App acts exclusively as a visual scoring tray for standard card mechanics and does not gather or transmit personal data from any user, including children under 13.
+      </p>
+
+      <h2>Data Deletion & Retention</h2>
+      <p>
+        Your historical match logs are retained on your device for as long as the application remains installed. You have total control over removing this data at any point:
+      </p>
+      <ol>
+        <li>
+          <strong>Via the App:</strong> Clear individual local entries directly inside the history screen overlay if options are available.
+        </li>
+        <li>
+          <strong>Via Device OS Settings:</strong> Go into your mobile operating system settings, select <strong>EskuMus</strong>, and choose <strong>Clear Data</strong> or <strong>Clear Storage</strong>.
+        </li>
+        <li>
+          <strong>Via Uninstallation:</strong> Deleting the app from your mobile device automatically wipes all local databases and cached match progression files managed by Android or iOS.
+        </li>
+        <li>
+          <strong>Via Web Browsers:</strong> Clearing your internet browser's cookies and local storage parameters completely wipes browser-persisted historical simulation logs.
+        </li>
+      </ol>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        The developer may update this page when new offline features or framework structures are applied to EskuMus. The “Last updated” date at the top will be modified accordingly.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For configuration questions or privacy inquiries regarding <strong>EskuMus</strong>, please reach out to the developer using the contact details or repository feedback handles provided on the official store or project distribution listings.
+      </p>
+    </main>
+  </body>
+</html>
